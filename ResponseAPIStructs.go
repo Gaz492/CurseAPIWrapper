@@ -16,7 +16,7 @@ type ModsSearchResponse struct {
 		} `json:"links"`
 		Summary           string `json:"summary"`
 		Status            int    `json:"status"`
-		DownloadCount     int    `json:"downloadCount"`
+		DownloadCount     float64    `json:"downloadCount"`
 		IsFeatured        bool   `json:"isFeatured"`
 		PrimaryCategoryID int    `json:"primaryCategoryId"`
 		Categories        []struct {
