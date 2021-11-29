@@ -1,4 +1,4 @@
-module CurseToolsAPI/CurseAPIWrapper
+module CurseAPIWrapper
 
 go 1.17
 
