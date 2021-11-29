@@ -20,7 +20,7 @@ func GetMod(id int) GetModResults {
 }
 
 func GetMods(ids []int) (GetModsResults, error) {
-	body, _ := json.Marshal(ids)
+	body, _ := json.Marshal(RequestMods{ModIds: ids})
 	resp, err := makeRequest("POST", v1ApiURL + "/projects/ids", body)
 	if err != nil {
 		return GetModsResults{}, err
