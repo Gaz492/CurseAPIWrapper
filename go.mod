@@ -1,4 +1,4 @@
-module CurseAPIWrapper
+module github.com/Gaz492/CurseAPIWrapper
 
 go 1.17
 
