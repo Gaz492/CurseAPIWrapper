@@ -68,7 +68,7 @@ type ModsSearchResponse struct {
 			} `json:"hashes"`
 			FileDate             time.Time `json:"fileDate"`
 			FileLength           int       `json:"fileLength"`
-			DownloadCount        int       `json:"downloadCount"`
+			DownloadCount        float64       `json:"downloadCount"`
 			DownloadURL          string    `json:"downloadUrl"`
 			GameVersions         []string  `json:"gameVersions"`
 			SortableGameVersions []struct {
@@ -128,7 +128,7 @@ type GetModResults struct {
 		} `json:"links"`
 		Summary           string `json:"summary"`
 		Status            int    `json:"status"`
-		DownloadCount     int    `json:"downloadCount"`
+		DownloadCount     float64    `json:"downloadCount"`
 		IsFeatured        bool   `json:"isFeatured"`
 		PrimaryCategoryID int    `json:"primaryCategoryId"`
 		Categories        []struct {
@@ -180,7 +180,7 @@ type GetModResults struct {
 			} `json:"hashes"`
 			FileDate             time.Time `json:"fileDate"`
 			FileLength           int       `json:"fileLength"`
-			DownloadCount        int       `json:"downloadCount"`
+			DownloadCount        float64       `json:"downloadCount"`
 			DownloadURL          string    `json:"downloadUrl"`
 			GameVersions         []string  `json:"gameVersions"`
 			SortableGameVersions []struct {
@@ -234,7 +234,7 @@ type GetModsResults struct {
 		} `json:"links"`
 		Summary           string `json:"summary"`
 		Status            int    `json:"status"`
-		DownloadCount     int    `json:"downloadCount"`
+		DownloadCount     float64    `json:"downloadCount"`
 		IsFeatured        bool   `json:"isFeatured"`
 		PrimaryCategoryID int    `json:"primaryCategoryId"`
 		Categories        []struct {
@@ -286,7 +286,7 @@ type GetModsResults struct {
 			} `json:"hashes"`
 			FileDate             time.Time `json:"fileDate"`
 			FileLength           int       `json:"fileLength"`
-			DownloadCount        int       `json:"downloadCount"`
+			DownloadCount        float64       `json:"downloadCount"`
 			DownloadURL          string    `json:"downloadUrl"`
 			GameVersions         []string  `json:"gameVersions"`
 			SortableGameVersions []struct {
