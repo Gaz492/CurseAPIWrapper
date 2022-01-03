@@ -20,6 +20,7 @@ func Initialize(key string) {
 
 func GetMod(id string) (GetModResults, error) {
 	resp, err := makeRequest("GET", v1ApiURL+"/mods/"+id, nil)
+	defer resp.Body.Close()
 	if err != nil {
 		return GetModResults{}, errors.New("[CurseAPIWrapper] makeRequest error: " + err.Error())
 	}
@@ -37,6 +38,7 @@ func GetMod(id string) (GetModResults, error) {
 func GetMods(ids []int) (GetModsResults, error) {
 	body, _ := json.Marshal(RequestMods{ModIds: ids})
 	resp, err := makeRequest("POST", v1ApiURL+"/mods", body)
+	defer resp.Body.Close()
 	if err != nil {
 		return GetModsResults{}, errors.New("[CurseAPIWrapper] makeRequest error: " + err.Error())
 	}
